@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: #ecf2ff;
+}
+
+.ParentCard {
+  display: flex;
+  border-radius: 32px;
+  background-color: white;
+}
+
+/* result component */
+.resultParent {
+  width: 368px;
+  background: var(
+    --Gradient-1,
+    linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
+  );
+
+  border-radius: 32px;
+  padding: 38px 54px 55px 54px;
+}
+
+.resultTitle {
+  font-size: 24px;
+  color: #cac9ff;
+  text-align: center;
+}
+
+.resultDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(
+    --Gradient-2,
+    linear-gradient(
+      180deg,
+      #4d21c9 0%,
+      rgba(37, 33, 201, 0) 100%,
+      rgba(37, 33, 201, 0) 100%
+    )
+  );
+}
+.resultDiv .result {
+  color: #fff;
+  font-size: 72px;
+}
+
+.resultDiv .maxScore {
+  color: var(--Light-Blue, #cac9ff);
+  font-size: 18px;
+}
+
+.rateDiv {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.rateDiv .rateTitle {
+  color: #fff;
+  font-size: 32px;
+}
+
+.rateDiv .rateDescription {
+  margin-top: 14px;
+  color: #cac9ff;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/* summary component */
+.summaryParent {
+  padding: 38px 40px 46px 40px;
+  width: 368px;
+}
+
+.SummaryTitle {
+  font-size: 24px;
+  color: #303b59;
+}
+
+.summaryUl {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  gap: 16px;
+}
+
+.summaryUl li {
+  padding: 17px 16px;
+  width: 288px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.summaryUl li .summerIcon-title {
+  display: flex;
+  align-items: center;
+}
+
+.summaryUl li .summerIcon-title img {
+  margin-right: 12px;
+  height: 20px;
+  width: 20px;
+}
+
+.summaryUl li .sumScorePar .maxScore {
+  color: gray;
+}
+
+.summaryUl .reactionLi {
+  border-radius: 12px;
+  background: var(
+    --red-95-white,
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    ),
+    #f55
+  );
+}
+
+.summaryUl .reactionLi .summerIcon-title {
+  color: #f55;
+}
+
+.summaryUl .memoryLi {
+  border-radius: 12px;
+  background: var(
+    --yellow-95-white,
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    ),
+    #ffb21e
+  );
+}
+.summaryUl .memoryLi .summerIcon-title {
+  color: #ffb21e;
+}
+.summaryUl .verbalLi {
+  border-radius: 12px;
+  background: var(
+    --green-95-white,
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    ),
+    #00bb8f
+  );
+}
+.summaryUl .verbalLi .summerIcon-title {
+  color: #00bb8f;
+}
+.summaryUl .visualLi {
+  border-radius: 12px;
+  background: var(
+    --blue-95-white,
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    ),
+    #1125d6
+  );
+}
+.summaryUl .visualLi .summerIcon-title {
+  color: #1125d6;
+}
+
+.continueBtnpar {
+  display: flex;
+  justify-content: center;
+}
+
+.continueBtn {
+  margin-top: 41px;
+  width: 288px;
+  height: 56px;
+  border-radius: 128px;
+  background: var(--Dark-Navy, #303b59);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid #303b59;
+  transition: 0.3s ease;
+}
+
+.continueBtn:hover {
+  background-color: #fff;
+  color: #303b59;
+}
+
+@media screen and (max-width: 740px) {
+  .ParentCard {
+    display: flex;
+    flex-direction: column;
+  }
+  body {
+    height: auto;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 373px) {
+  .ParentCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resultParent {
+    width: 330px;
+  }
+  .summaryParent {
+    width: 330px;
+  }
+
+  .summaryUl {
+    align-items: center;
+  }
+}
